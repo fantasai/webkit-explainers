@@ -7,7 +7,7 @@
   <link href="https://www.w3.org/StyleSheets/TR/2021/W3C-UD" rel="stylesheet">
   <meta content="Bikeshed version e0b165ae4, updated Mon Nov 2 15:16:49 2026 -0800" name="generator">
   <link href="TBD" rel="canonical">
-  <meta content="d5ecfaa3f8c72dd0c7378756a9e37fb24756c0cd" name="revision">
+  <meta content="c91e30aabfd902667f99299183a1dccf802ff89a" name="revision">
   <meta content="dark light" name="color-scheme">
   <link href="https://www.w3.org/StyleSheets/TR/2021/dark.css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css">
 <style>/* Boilerplate: style-autolinks */
@@ -869,7 +869,7 @@ dd:not(:last-child) > .wpt-tests-block:not([open]):last-child {
 </p>
    <h1 class="no-ref p-name" id="title">CSS Spatial Layout Module Level 1</h1>
    <p id="w3c-state"><a href="https://www.w3.org/standards/types/#UD">Unofficial Proposal Draft</a>,
-    <time class="dt-updated" datetime="2026-11-05">5 November 2026</time></p>
+    <time class="dt-updated" datetime="2026-11-11">11 November 2026</time></p>
    <details open>
     <summary>More details about this document</summary>
     <div data-fill-with="spec-metadata">
@@ -877,7 +877,7 @@ dd:not(:last-child) > .wpt-tests-block:not([open]):last-child {
       <dt>This version:
       <dd><a class="u-url" href="TBD">TBD</a>
       <dt>Issue Tracking:
-      <dd><a href="https://github.com/WebKit/explainers/issues">WebKit Explainers Repository Issues</a>
+      <dd><a href="https://github.com/w3c/csswg-drafts/labels/css-spatial-3">CSSWG Issues Repository</a>
       <dd><a href="#issues-index">Inline In Spec</a>
       <dt class="editor">Editors:
       <dd class="editor h-card p-author vcard" data-editor-id="66378"><a class="email fn p-name u-email" href="mailto:adarose@apple.com">Ada Rose Cannon</a> (<span class="org p-org">Apple</span>)
@@ -888,7 +888,8 @@ dd:not(:last-child) > .wpt-tests-block:not([open]):last-child {
     </div>
    </details>
    <div data-fill-with="warning"></div>
-   <p class="copyright" data-fill-with="copyright">Copyright © 2026 Apple.</p>
+   <p class="copyright" data-fill-with="copyright"><a href="https://www.w3.org/policies/#copyright">Copyright</a> © 2026 <a href="https://www.w3.org/">World Wide Web Consortium</a>. <abbr title="World Wide Web Consortium">W3C</abbr><sup>®</sup> <a href="https://www.w3.org/policies/#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/policies/#W3C_Trademarks">trademark</a> and <a href="https://www.w3.org/copyright/software-license/" rel="license" title="W3C Software and Document License">permissive document license</a> rules apply.
+</p>
    <hr title="Separator for header">
   </div>
   <div class="p-summary" data-fill-with="abstract">
@@ -905,8 +906,36 @@ on screen, on paper, etc.
   </div>
   <h2 class="heading no-num no-ref no-toc settled" id="sotd"><span class="content">Status of this document</span></h2>
   <div data-fill-with="status">
-   <p>This is an unofficial draft produced as an extension proposal for CSS.
-    If accepted, it would most likely become a work item of the <a href="https://www.w3.org/Style/CSS/">W3C CSS Working Group</a>.
+   <p><em>This section describes the status of this document at the time of its publication.
+	A list of current W3C publications
+	and the latest revision of this technical report
+	can be found in the <a href="https://www.w3.org/TR/">W3C standards and drafts index.</a></em>
+
+</p>
+   <p>Please send feedback
+	by <a href="https://github.com/w3c/csswg-drafts/issues">filing issues in GitHub</a> (preferred),
+	including the spec code “css-spatial” in the title, like this:
+	“[css-spatial] <i>…summary of comment…</i>”.
+	All issues and comments are <a href="https://lists.w3.org/Archives/Public/public-css-archive/">archived</a>.
+	Alternately, feedback can be sent to the (<a href="https://lists.w3.org/Archives/Public/www-style/">archived</a>) public mailing list
+	<a href="mailto:www-style@w3.org?Subject=%5Bcss-spatial%5D%20PUT%20SUBJECT%20HERE">www-style@w3.org</a>.
+
+</p>
+   <p>This document is governed by the
+	<a href="https://www.w3.org/policies/process/20250818/" id="w3c_process_revision">18 August 2025 W3C Process Document</a>.
+
+</p>
+   <p>This document was produced by a group operating under the
+	<a href="https://www.w3.org/policies/patent-policy/20200915/">W3C Patent Policy</a>.
+	W3C maintains a
+	<a href="https://www.w3.org/groups/wg/css/ipr" rel="disclosure">public list of any patent disclosures</a>
+	made in connection with the deliverables of the group;
+	that page also includes instructions for disclosing a patent.
+	An individual who has actual knowledge of a patent that the individual believes
+	contains <a href="https://www.w3.org/policies/patent-policy/20200915/#def-essential">Essential Claim(s)</a>
+	must disclose the information in accordance with
+	<a href="https://www.w3.org/policies/patent-policy/20200915/#sec-Disclosure">section 6 of the W3C Patent Policy</a>.
+
 </p>
   </div>
   <div data-fill-with="at-risk"></div>
@@ -1239,6 +1268,16 @@ into the the “world” of the <a data-link-type="dfn" href="#back-spatial-cont
 	not otherwise contained by a <span id="ref-for-containing-volume①">containing volume</span>
 	(excepting content whose <a data-link-type="dfn" href="https://drafts.csswg.org/css-display-4/#containing-block" id="ref-for-containing-block">containing block</a> would be an ancestor of this element,
 	such as <a data-link-type="dfn" href="https://drafts.csswg.org/css-position-3/#fixed-position" id="ref-for-fixed-position">fixed-positioned boxes</a>).</p>
+   <figure>
+    <div style="display: flex; gap: 1em; padding: 1em;">
+			<img alt="a web page with a region extending forward from its surface" src="images/diagrams/0-page.svg" style="max-height: 80vh; background: transparent;">
+			<img alt="a web page with a hole cut through it, revealing a 3D space behind" src="images/diagrams/0-portal.svg" style="max-height: 80vh; background: transparent;">
+		</div>
+    <figcaption>Two diagrams depicting the available space
+			in front of a page (for <a class="css" data-link-type="propdesc" href="#propdef-spatial" id="ref-for-propdef-spatial⑤">spatial: page</a> and <span class="css" id="ref-for-propdef-spatial⑥">spatial: portal</span>)
+			and behind the page (for <span class="css" id="ref-for-propdef-spatial⑦">spatial: portal</span>)
+		</figcaption>
+   </figure>
    <h4 class="heading settled" data-level="2.1.1" id="portal-nesting"><span class="secno">2.1.1. </span><span class="content">
 Nesting Portals</span><a class="self-link" href="#portal-nesting"></a></h4>
    <p>Nesting a <a data-link-type="dfn" href="#portal" id="ref-for-portal④">portal</a> inside an existing <span id="ref-for-portal⑤">portal</span>
@@ -1295,7 +1334,7 @@ The Front Spatial Context</span><a class="self-link" href="#spatial-context-fron
    <p>The <a data-link-type="dfn" href="#allowed-volume" id="ref-for-allowed-volume①">allowed volume</a> of the <a data-link-type="dfn" href="#front-spatial-context" id="ref-for-front-spatial-context③">front spatial context</a> is
 	the <a data-link-type="dfn" href="#page-allowed-volume" id="ref-for-page-allowed-volume②">page allowed volume</a> clipped by the <a data-link-type="dfn" href="#spatial-container" id="ref-for-spatial-container⑧">spatial container</a>’s <a data-link-type="dfn" href="#front-limit-plane" id="ref-for-front-limit-plane②">front limit plane</a> in front,
 	clipped by the <a data-link-type="dfn" href="https://drafts.csswg.org/css-overflow-4/#overflow-clip-edge" id="ref-for-overflow-clip-edge">overflow clip edge</a> on the sides (if <a class="css property" data-link-type="property" href="https://drafts.csswg.org/css-overflow-3/#propdef-overflow" id="ref-for-propdef-overflow">overflow</a> clipping applies),
-	and in the case of a <a class="css" data-link-type="propdesc" href="#propdef-spatial" id="ref-for-propdef-spatial⑤">spatial: portal</a> <span id="ref-for-spatial-container⑨">spatial container</span>,
+	and in the case of a <a class="css" data-link-type="propdesc" href="#propdef-spatial" id="ref-for-propdef-spatial⑧">spatial: portal</a> <span id="ref-for-spatial-container⑨">spatial container</span>,
 	extending infinitely into the <a data-link-type="dfn" href="#back-spatial-context" id="ref-for-back-spatial-context⑤">back spatial context</a> behind the <a data-link-type="dfn" href="#portal" id="ref-for-portal⑥">portal</a>.</p>
    <figure>
     
@@ -1337,7 +1376,7 @@ The Back Spatial Context</span><a class="self-link" href="#spatial-context-back"
 	are defined by the <a class="css property" data-link-type="property" href="#propdef-portal-stage" id="ref-for-propdef-portal-stage">portal-stage</a> and <a class="css property" data-link-type="property" href="#propdef-portal-transform" id="ref-for-propdef-portal-transform">portal-transform</a> properties (respectively).</p>
    <h4 class="heading settled" data-level="2.2.3" id="spatial-context-full"><span class="secno">2.2.3. </span><span class="content">
 Full Portals: Connecting the Front and Back Spatial Contexts</span><a class="self-link" href="#spatial-context-full"></a></h4>
-   <p>A <a class="css" data-link-type="propdesc" href="#propdef-spatial" id="ref-for-propdef-spatial⑥">spatial: portal</a> <a data-link-type="dfn" href="#spatial-container" id="ref-for-spatial-container①③">spatial container</a> connects the <a data-link-type="dfn" href="#front-spatial-context" id="ref-for-front-spatial-context④">front</a> and <a data-link-type="dfn" href="#back-spatial-context" id="ref-for-back-spatial-context①⓪">back</a> spatial contexts
+   <p>A <a class="css" data-link-type="propdesc" href="#propdef-spatial" id="ref-for-propdef-spatial⑨">spatial: portal</a> <a data-link-type="dfn" href="#spatial-container" id="ref-for-spatial-container①③">spatial container</a> connects the <a data-link-type="dfn" href="#front-spatial-context" id="ref-for-front-spatial-context④">front</a> and <a data-link-type="dfn" href="#back-spatial-context" id="ref-for-back-spatial-context①⓪">back</a> spatial contexts
 	through its <a data-link-type="dfn" href="#portal" id="ref-for-portal⑨">portal</a>,
 	as if it were a window into the <span id="ref-for-back-spatial-context①①">back spatial context</span>
 	and the contents of the <span id="ref-for-front-spatial-context⑤">front spatial context</span> were attached to its window “glass”.</p>
@@ -1433,6 +1472,15 @@ Defining Stage: the <a class="css property" data-link-type="property" href="#pro
 	(which position the content based on the size of the stage)
 	can give weird results.</strong></p>
    <p class="note" role="note"><span class="marker">Note:</span> This property is analogous to the <a class="css property" data-link-type="property" href="https://drafts.csswg.org/css-images-5/#propdef-object-view-box" id="ref-for-propdef-object-view-box">object-view-box</a> property which applies to 2D objects.</p>
+   <figure>
+    
+		<img alt="Dimensioned diagram of a portal stage showing 10cm horizontal, 8cm vertical, 15cm back, and 2cm front extents" src="images/diagrams/6-stage.svg" style="max-height: 80vh; background: transparent;">
+		
+    <figcaption>This diagram shows a portal set to <code>portal-stage: 10cm 8cm / 15cm 2cm;</code>
+		with its size in each dimension labelled.
+		The axes are coloured red (X, horizontal), green (Y, vertical) and blue (Z, depth).
+		</figcaption>
+   </figure>
    <h5 class="heading settled" data-level="2.3.1.1" id="portal-stage-auto-volume"><span class="secno">2.3.1.1. </span><span class="content">
 Calculating an Automatic Containing Volume</span><a class="self-link" href="#portal-stage-auto-volume"></a></h5>
    <p>For the purpose of <a class="css" data-link-type="propdesc" href="#propdef-portal-stage" id="ref-for-propdef-portal-stage⑥">portal-stage: auto</a>,
@@ -1590,6 +1638,13 @@ the resolution of <span class="css">1px</span> grows so that it has the same vis
 			but resolving <a class="css" data-link-type="maybe" href="https://drafts.csswg.org/css-values-4/#px" id="ref-for-px②">px</a> and relative units against the portal glass).
 		See <a href="https://drafts.csswg.org/css-values-4/#lengths"><cite>CSS Values 4</cite> § 6 Distance Units: the &lt;length> type</a> for more information on CSS length units.</p>
    </div>
+   <figure>
+    
+		<img alt="A product card rotated 45 degrees inside a portal; it has been moved back into the portal." src="images/diagrams/7-card-auto.svg" style="max-height: 80vh; background: transparent;">
+		
+    <figcaption>This diagram shows a portal with its contents rotated by 45deg and then automatically scaled/translated to fit using <code>portal-transform: rotateY(45deg) auto;</code>.
+		</figcaption>
+   </figure>
    <h4 class="heading settled" data-level="2.3.3" id="stage-interactivity"><span class="secno">2.3.3. </span><span class="content">
 Interacting with the Stage: the <a class="css property" data-link-type="property" href="#propdef-portal-action" id="ref-for-propdef-portal-action②">portal-action</a> property</span><a class="self-link" href="#stage-interactivity"></a></h4>
    <table class="def propdef" data-link-for-hint="portal-action">
@@ -1688,6 +1743,17 @@ Front Limits: how far content can be raised on the page</span><a class="self-lin
    <p>The author can control the <a data-link-type="dfn" href="#front-limit" id="ref-for-front-limit①">front limit</a> effect with the the <a class="css property" data-link-type="property" href="#propdef-front-limit" id="ref-for-propdef-front-limit①">front-limit</a> property;
 	query the computed <span class="property" id="ref-for-propdef-front-limit②">front-limit</span> of a given <a data-link-type="dfn" href="#spatial-container" id="ref-for-spatial-container②⓪">spatial container</a> using <code class="idl"><a data-link-type="idl" href="https://drafts.csswg.org/cssom-1/#dom-window-getcomputedstyle" id="ref-for-dom-window-getcomputedstyle">getComputedStyle()</a></code>;
 	and query the UA-dictated <span id="ref-for-front-limit②">front limit</span> for a page using the <a class="property" data-link-type="propdesc" href="#descdef-media-front-limit" id="ref-for-descdef-media-front-limit">front-limit</a> <a data-link-type="dfn" href="https://drafts.csswg.org/mediaqueries-5/#media-query" id="ref-for-media-query">media query</a>.</p>
+   <figure>
+    <div style="display: flex; gap: 1em; padding: 1em;">
+			<img alt="Recipe cards pushed into a hole in the page, the second one is raised forward." src="images/diagrams/5-adaptive-noforward.svg" style="background: transparent;">
+			<img alt="Recipe cards with the active card raised forward above the page." src="images/diagrams/5-adaptive-shallowforward.svg" style="background: transparent;">
+		</div>
+    <figcaption>These two diagrams show
+		how the same design can be adapted to handle different amounts of available front limit.
+		The left diagram shows a design for when there is no front limit, which uses the portal space.
+		The right diagram shows a design which is able to make use of the front space when the front limit is sufficient.
+		</figcaption>
+   </figure>
    <h4 class="heading settled" data-level="2.4.1" id="front-limit-property"><span class="secno">2.4.1. </span><span class="content">
 Controlling the Front Limit: the <a class="css property" data-link-type="property" href="#propdef-front-limit" id="ref-for-propdef-front-limit③">front-limit</a> property</span><a class="self-link" href="#front-limit-property"></a></h4>
    <table class="def propdef" data-link-for-hint="front-limit">
@@ -1878,7 +1944,7 @@ Clamping Relative Spatial Positioning to the Front Limit</span><a class="self-li
    <p>If the <a class="css property" data-link-type="property" href="#propdef-inset-front" id="ref-for-propdef-inset-front②">inset-front</a> and <a class="css property" data-link-type="property" href="#propdef-inset-back" id="ref-for-propdef-inset-back②">inset-back</a> properties would position the box beyond
 	the <a data-link-type="dfn" href="#front-limit-plane" id="ref-for-front-limit-plane③">front limit plane</a> of its <a data-link-type="dfn" href="#portal" id="ref-for-portal①②">portal</a>,
 	then their <a data-link-type="dfn" href="https://drafts.csswg.org/css-cascade-5/#used-value" id="ref-for-used-value">used values</a> are clamped to stay within the <a data-link-type="dfn" href="#front-limit" id="ref-for-front-limit⑤">front limit</a>.</p>
-   <p>In the case of <a class="css" data-link-type="propdesc" href="#propdef-spatial" id="ref-for-propdef-spatial⑦">spatial: page</a> if
+   <p>In the case of <a class="css" data-link-type="propdesc" href="#propdef-spatial" id="ref-for-propdef-spatial①⓪">spatial: page</a> if
 	the <a class="css property" data-link-type="property" href="#propdef-inset-front" id="ref-for-propdef-inset-front③">inset-front</a> and <a class="css property" data-link-type="property" href="#propdef-inset-back" id="ref-for-propdef-inset-back③">inset-back</a> properties would position the box
 	below the <a data-link-type="dfn" href="#portal-plane" id="ref-for-portal-plane⑦">portal plane</a>,
 	then their <a data-link-type="dfn" href="https://drafts.csswg.org/css-cascade-5/#used-value" id="ref-for-used-value①">used values</a> are clamped to stay in the plane of the page.</p>
@@ -1904,8 +1970,8 @@ Absolute Spatial Positioning: the <a class="css" data-link-type="maybe" href="#v
 	When contained by a <a data-link-type="dfn" href="#spatial-container" id="ref-for-spatial-container②⑨">spatial container</a>,
 	this value takes the now <a data-link-type="dfn" href="#spatial-positioning" id="ref-for-spatial-positioning⑤">spatially positioned</a> box <a data-link-type="dfn" href="https://drafts.csswg.org/css-display-4/#out-of-flow" id="ref-for-out-of-flow">out of flow</a>
 	and positions it into the <a data-link-type="dfn" href="#containing-volume" id="ref-for-containing-volume②③">containing volume</a> of
-	the <a data-link-type="dfn" href="#back-spatial-context" id="ref-for-back-spatial-context③⑨">back spatial context</a> (in the case of <a class="css" data-link-type="propdesc" href="#propdef-spatial" id="ref-for-propdef-spatial⑧">spatial: portal</a>),
-	or the <a data-link-type="dfn" href="#front-spatial-context" id="ref-for-front-spatial-context①②">front spatial context</a> (in the case of <span class="css" id="ref-for-propdef-spatial⑨">spatial: page</span>)
+	the <a data-link-type="dfn" href="#back-spatial-context" id="ref-for-back-spatial-context③⑨">back spatial context</a> (in the case of <a class="css" data-link-type="propdesc" href="#propdef-spatial" id="ref-for-propdef-spatial①①">spatial: portal</a>),
+	or the <a data-link-type="dfn" href="#front-spatial-context" id="ref-for-front-spatial-context①②">front spatial context</a> (in the case of <span class="css" id="ref-for-propdef-spatial①②">spatial: page</span>)
 	of its <span id="ref-for-spatial-container③⓪">spatial container</span>.</p>
    <p>This style of positioning is called <dfn class="dfn-paneled" data-dfn-type="dfn" data-lt="absolute spatial positioning | absolutely spatial positioned" data-noexport id="absolute-spatial-positioning">absolute spatial positioning</dfn>,
 	and it uses the <a data-link-type="dfn" href="https://drafts.csswg.org/css-logical-1/#inset-properties" id="ref-for-inset-properties①">inset properties</a> (including the new <a class="css property" data-link-type="property" href="#propdef-inset-back" id="ref-for-propdef-inset-back④">inset-back</a> and <a class="css property" data-link-type="property" href="#propdef-inset-front" id="ref-for-propdef-inset-front④">inset-front</a> properties)
@@ -2005,7 +2071,18 @@ for <a data-link-type="dfn" href="#absolute-spatial-positioning" id="ref-for-abs
 	Boxes positioned at the same <a data-link-type="dfn" href="#z-axis" id="ref-for-z-axis①①">z-axis</a> position
 	are sorted primarily by <a class="css property" data-link-type="property" href="https://drafts.csswg.org/css2/#propdef-z-index" id="ref-for-propdef-z-index①">z-index</a> and secondarily by <a data-link-type="dfn" href="https://drafts.csswg.org/css-display-4/#document-order" id="ref-for-document-order">document order</a>
 	for the purposes of painting and hit-testing.</p>
-   <p class="issue" id="issue-fc0dd4f9"><a class="self-link" href="#issue-fc0dd4f9"></a> Need a diagram!</p>
+   <figure>
+    <div style="display: flex; flex-direction: column; gap: 1em; padding: 1em;">
+			<img alt="Three diagrams of a volume embedded in the page each with arrows from an edge with a positive direction pointing towards the center and a negative arrow pointing away from the box. The surfaces with the arrows in each diagram are: top, front and right respectively" src="images/diagrams/portal-contexts.svg" style="background: transparent;">
+			<img alt="Three diagrams of a volume on the page surface each with arrows from an edge with a positive direction pointing towards the center and a negative arrow pointing away from the box. The surfaces with the arrows in each diagram are: top, front and right respectively" src="images/diagrams/front-contexts.svg" style="background: transparent;">
+		</div>
+    <figcaption>As in the 2D case,
+		positive insets move the named face inward, toward the center of the box,
+		and negative insets move it outward, away from the box.
+		The top row shows a volume embedded in the page (a portal).
+		The bottom row shows a volume on the page surface.
+		</figcaption>
+   </figure>
    <h4 class="heading settled" data-level="3.3.1" id="inset-aliasing"><span class="secno">3.3.1. </span><span class="content">
 Inset Aliases: the <a class="css property" data-link-type="property" href="#propdef-inset-top" id="ref-for-propdef-inset-top">inset-top</a>, <a class="css property" data-link-type="property" href="#propdef-inset-right" id="ref-for-propdef-inset-right">inset-right</a>, <a class="css property" data-link-type="property" href="#propdef-inset-bottom" id="ref-for-propdef-inset-bottom">inset-bottom</a>, and <a class="css property" data-link-type="property" href="#propdef-inset-left" id="ref-for-propdef-inset-left">inset-left</a> properties</span><a class="self-link" href="#inset-aliasing"></a></h4>
    <table class="def propdef shorthand" data-link-for-hint="inset-top">
@@ -2407,6 +2484,13 @@ Anchor-based Coordinates: the <a class="css property" data-link-type="property" 
 			Is it just transformed along with the anchor box (simple but maybe not very useful),
 			or is it independently intersected somehow?</p>
    </dl>
+   <figure>
+    
+		<img alt="A diagram showing two teapots, on the left the teapot body rocks back and forth and its lid moves back and forth, staying in position but not rotating with the teapot. The teapot on the right is also rocking back and forth but the lid remains in place and rotates with the teapot." src="images/diagrams/position-context.svg" style="max-height: 80vh; background: transparent;">
+		
+    <figcaption>This illustration is to describe how position-context can be used to attach an element to another. The teapot on the left has position-context container, it is anchored to the correct spot as the teapot rotates but doesn’t rotate with it. Position anchor allows the lid to rotate with teapot so it appears to remain in place relative to the teapot.
+		</figcaption>
+   </figure>
    <h2 class="heading settled" data-level="4" id="spatial-transforms"><span class="secno">4. </span><span class="content">
 Spatial Transforms</span><a class="self-link" href="#spatial-transforms"></a></h2>
    <p>Transforms applied to <a data-link-type="dfn" href="#spatial-positioning" id="ref-for-spatial-positioning⑦">spatially positioned</a> objects—​whether direct children of the <a data-link-type="dfn" href="#spatial-container" id="ref-for-spatial-container③②">spatial container</a> or not—​inherently participate in the <a data-link-type="dfn" href="https://drafts.csswg.org/css-transforms-2/#3d-rendering-context" id="ref-for-3d-rendering-context②">3D rendering context</a>
@@ -2434,6 +2518,13 @@ Interactions with Spatial Content</span><a class="self-link" href="#interactions
 Environment Maps</span><a class="self-link" href="#environment-maps"></a></h2>
    <p>An <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="environment-map">environment map</dfn> describes the lighting
 	surrounding an object in a <a data-link-type="dfn" href="#spatial-context" id="ref-for-spatial-context⑦">spatial context</a>.</p>
+   <figure>
+    
+		<img alt="An illustration of a 3D teapot it is lit from the left with orange light and lit from the right with blue light." src="images/diagrams/10-envmap.svg" style="max-height: 80vh; background: transparent;">
+		
+    <figcaption>A model with an orange and blue environment map has its apparent lighting changed, the environment map is only visible as reflected on the surface of the model.
+		</figcaption>
+   </figure>
    <h3 class="heading settled" data-level="6.1" id="environment-map-definition"><span class="secno">6.1. </span><span class="content">
 Defining Environment Maps: the <a class="css" data-link-type="maybe" href="#at-ruledef-environment-map" id="ref-for-at-ruledef-environment-map">@environment-map</a> rule</span><a class="self-link" href="#environment-map-definition"></a></h3>
    <p><a data-link-type="dfn" href="#environment-map" id="ref-for-environment-map">Environment maps</a> are named and defined using the <dfn class="css dfn-paneled" data-dfn-type="at-rule" data-export id="at-ruledef-environment-map">@environment-map</dfn> <a data-link-type="dfn" href="https://drafts.csswg.org/css-syntax-3/#at-rule" id="ref-for-at-rule">at-rule</a>,
@@ -3539,7 +3630,7 @@ for absolute spatial positioning, relative to the z-axis size of the containing 
       <td>per grammar
       <td>as specified
      <tr>
-      <th scope="row"><a class="css" data-link-type="property" href="#propdef-spatial" id="ref-for-propdef-spatial①⓪">spatial</a>
+      <th scope="row"><a class="css" data-link-type="property" href="#propdef-spatial" id="ref-for-propdef-spatial①③">spatial</a>
       <td>none | page | portal
       <td>none
       <td>all elements except internal table elements, internal ruby elements, and inline boxes
@@ -3680,7 +3771,6 @@ the resolution of <span class="css">1px</span> grows so that it has the same vis
     	 <a class="issue-return" href="#issue-4a237603" title="Jump to section">↵</a>
    </div>
    <div class="issue"> What should happen if there’s no containing portal? <a class="issue-return" href="#issue-22cb4019" title="Jump to section">↵</a></div>
-   <div class="issue"> Need a diagram! <a class="issue-return" href="#issue-fc0dd4f9" title="Jump to section">↵</a></div>
    <div class="issue"> What should be the effective containing block used to calculate the <a data-link-type="dfn" href="https://drafts.csswg.org/css-anchor-position-1/#position-area-grid">position-area grid</a>?
 			Is it just transformed along with the anchor box (simple but maybe not very useful),
 			or is it independently intersected somehow? <a class="issue-return" href="#issue-ce7094fe" title="Jump to section">↵</a></div>
@@ -4051,7 +4141,7 @@ let dfnPanelData = {
 "propdef-portal-stage": {"dfnID":"propdef-portal-stage","dfnText":"portal-stage","external":false,"refSections":[{"refs":[{"id":"ref-for-propdef-portal-stage"}],"title":"2.2.2. The Back Spatial Context"},{"refs":[{"id":"ref-for-propdef-portal-stage\u2460"}],"title":"2.3. Configuring the Back Spatial Context"},{"refs":[{"id":"ref-for-propdef-portal-stage\u2461"},{"id":"ref-for-propdef-portal-stage\u2462"},{"id":"ref-for-propdef-portal-stage\u2463"},{"id":"ref-for-propdef-portal-stage\u2464"}],"title":"2.3.1. Defining Stage: the portal-stage property"},{"refs":[{"id":"ref-for-propdef-portal-stage\u2465"},{"id":"ref-for-propdef-portal-stage\u2466"}],"title":"2.3.1.1. Calculating an Automatic Containing Volume"},{"refs":[{"id":"ref-for-propdef-portal-stage\u2467"}],"title":"3.2. Absolute Spatial Positioning: the spatial-absolute keyword for position"}],"url":"#propdef-portal-stage"},
 "propdef-portal-transform": {"dfnID":"propdef-portal-transform","dfnText":"portal-transform","external":false,"refSections":[{"refs":[{"id":"ref-for-propdef-portal-transform"}],"title":"2.2.2. The Back Spatial Context"},{"refs":[{"id":"ref-for-propdef-portal-transform\u2460"}],"title":"2.3. Configuring the Back Spatial Context"},{"refs":[{"id":"ref-for-propdef-portal-transform\u2461"}],"title":"2.3.1. Defining Stage: the portal-stage property"},{"refs":[{"id":"ref-for-propdef-portal-transform\u2462"},{"id":"ref-for-propdef-portal-transform\u2463"},{"id":"ref-for-propdef-portal-transform\u2464"}],"title":"2.3.2. Transforming the Stage: the portal-transform property"},{"refs":[{"id":"ref-for-propdef-portal-transform\u2465"},{"id":"ref-for-propdef-portal-transform\u2466"}],"title":"2.3.3. Interacting with the Stage: the portal-action property"}],"url":"#propdef-portal-transform"},
 "propdef-position-context": {"dfnID":"propdef-position-context","dfnText":"position-context","external":false,"refSections":[{"refs":[{"id":"ref-for-propdef-position-context"}],"title":"3.5.6. Anchor-based Coordinates: the position-context property"}],"url":"#propdef-position-context"},
-"propdef-spatial": {"dfnID":"propdef-spatial","dfnText":"spatial","external":false,"refSections":[{"refs":[{"id":"ref-for-propdef-spatial"},{"id":"ref-for-propdef-spatial\u2460"},{"id":"ref-for-propdef-spatial\u2461"},{"id":"ref-for-propdef-spatial\u2462"},{"id":"ref-for-propdef-spatial\u2463"}],"title":"2.1. Establishing Spatial Contexts and Portals: the spatial property"},{"refs":[{"id":"ref-for-propdef-spatial\u2464"}],"title":"2.2.1. The Front Spatial Context"},{"refs":[{"id":"ref-for-propdef-spatial\u2465"}],"title":"2.2.3. Full Portals: Connecting the Front and Back Spatial Contexts"},{"refs":[{"id":"ref-for-propdef-spatial\u2466"}],"title":"3.1.1. Clamping Relative Spatial Positioning to the Front Limit"},{"refs":[{"id":"ref-for-propdef-spatial\u2467"},{"id":"ref-for-propdef-spatial\u2468"}],"title":"3.2. Absolute Spatial Positioning: the spatial-absolute keyword for position"}],"url":"#propdef-spatial"},
+"propdef-spatial": {"dfnID":"propdef-spatial","dfnText":"spatial","external":false,"refSections":[{"refs":[{"id":"ref-for-propdef-spatial"},{"id":"ref-for-propdef-spatial\u2460"},{"id":"ref-for-propdef-spatial\u2461"},{"id":"ref-for-propdef-spatial\u2462"},{"id":"ref-for-propdef-spatial\u2463"},{"id":"ref-for-propdef-spatial\u2464"},{"id":"ref-for-propdef-spatial\u2465"},{"id":"ref-for-propdef-spatial\u2466"}],"title":"2.1. Establishing Spatial Contexts and Portals: the spatial property"},{"refs":[{"id":"ref-for-propdef-spatial\u2467"}],"title":"2.2.1. The Front Spatial Context"},{"refs":[{"id":"ref-for-propdef-spatial\u2468"}],"title":"2.2.3. Full Portals: Connecting the Front and Back Spatial Contexts"},{"refs":[{"id":"ref-for-propdef-spatial\u2460\u24ea"}],"title":"3.1.1. Clamping Relative Spatial Positioning to the Front Limit"},{"refs":[{"id":"ref-for-propdef-spatial\u2460\u2460"},{"id":"ref-for-propdef-spatial\u2460\u2461"}],"title":"3.2. Absolute Spatial Positioning: the spatial-absolute keyword for position"}],"url":"#propdef-spatial"},
 "propdef-z-align-items": {"dfnID":"propdef-z-align-items","dfnText":"z-align-items","external":false,"refSections":[{"refs":[{"id":"ref-for-propdef-z-align-items"},{"id":"ref-for-propdef-z-align-items\u2460"},{"id":"ref-for-propdef-z-align-items\u2461"}],"title":"3.5.4. Extensions to Box Alignment: the z-align-self and z-align-items properties"},{"refs":[{"id":"ref-for-propdef-z-align-items\u2462"}],"title":"3.5.5. Extensions to Anchor Alignment: the anchor-origin value"}],"url":"#propdef-z-align-items"},
 "propdef-z-align-self": {"dfnID":"propdef-z-align-self","dfnText":"z-align-self","external":false,"refSections":[{"refs":[{"id":"ref-for-propdef-z-align-self"},{"id":"ref-for-propdef-z-align-self\u2460"},{"id":"ref-for-propdef-z-align-self\u2461"}],"title":"3.5.4. Extensions to Box Alignment: the z-align-self and z-align-items properties"},{"refs":[{"id":"ref-for-propdef-z-align-self\u2462"}],"title":"3.5.5. Extensions to Anchor Alignment: the anchor-origin value"}],"url":"#propdef-z-align-self"},
 "relative-spatial-positioning": {"dfnID":"relative-spatial-positioning","dfnText":"relative spatial positioning","external":false,"refSections":[{"refs":[{"id":"ref-for-relative-spatial-positioning"}],"title":"2.1. Establishing Spatial Contexts and Portals: the spatial property"},{"refs":[{"id":"ref-for-relative-spatial-positioning\u2460"}],"title":"2.2. Spatial Contexts and the Spatial Layout Model"},{"refs":[{"id":"ref-for-relative-spatial-positioning\u2461"}],"title":"2.2.1. The Front Spatial Context"},{"refs":[{"id":"ref-for-relative-spatial-positioning\u2462"}],"title":"3.3. Z-axis Insets: the inset-front and inset-back properties"}],"url":"#relative-spatial-positioning"},
